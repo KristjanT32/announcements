@@ -1,0 +1,33 @@
+name: Announcements
+version: '${project.version}'
+main: krisapps.announcements.Announcements
+api-version: 1.15
+authors: [ _TheTechGuy_ ]
+description: A remake of my old announcements plugin (ServerAnnouncements).
+
+commands:
+  createannouncement:
+    usage: "/createannouncement <id> <context> [target] <announcementBody> "
+    description: "Creates an announcement preset to be used later."
+    permission: "announcements.general"
+  announce:
+    usage: "/announce <announcementPreset>"
+    description: "Sends out the announcement according to its specified context."
+    permission: "announcements.general"
+  previewannouncement:
+    usage: "/previewannouncement <id>"
+    description: "Sends the sender a preview of how the message will look like when broadcast."
+    permission: "announcements.general"
+  scheduleautoannounce:
+    usage: "/scheduleautoannounce <id> <condition>"
+    description: "Schedules an auto-announce trigger, so the announcement will be broadcast when this trigger is activated."
+    permission: "announcements.general"
+  resetautoannounce:
+    usage: "/resetautoannounce <id>"
+    description: "Resets the auto-announce trigger for the specified announcement."
+    permission: "announcements.general"
+
+permissions:
+  announcements.general:
+    description: "General plugin operations. Default for operators."
+    default: op

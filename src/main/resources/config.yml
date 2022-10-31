@@ -1,0 +1,10 @@
+# Plugin configuration file for ${project.name} ${project.version}
+
+# General
+
+# Customization
+customization:
+  header: "&e=====&b[[&lSERVER ANNOUNCEMENT&r&b]]&e======================="
+  footer: "&e==================================================="
+  divider: "&b----------------------------------------------------"
+
