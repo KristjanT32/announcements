@@ -57,7 +57,12 @@ public class CreateAnnoucement implements CommandExecutor {
             } else {
                 contextVariable = null;
             }
-            create(context, contextVariable, bodyText.toString(), args[0]);
+            if (main.data.getString("presets." + args[0]) != null) {
+                sender.sendMessage(SimpleMessageBuilder.parse("&cSorry, but another announcement is already using this id."));
+                return false;
+            } else {
+                create(context, contextVariable, bodyText.toString(), args[0]);
+            }
 
         } else {
             sender.sendMessage(SimpleMessageBuilder.parse("&cToo few arguments provided."));

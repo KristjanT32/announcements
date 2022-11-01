@@ -26,6 +26,10 @@ commands:
     usage: "/resetautoannounce <id>"
     description: "Resets the auto-announce trigger for the specified announcement."
     permission: "announcements.general"
+  editannouncement:
+    usage: "/editannouncement <id> <property> <newValue>"
+    description: "Modifies the properties of the selected announcement."
+    permission: "announcements.general"
 
 permissions:
   announcements.general:

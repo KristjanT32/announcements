@@ -1,10 +1,7 @@
 package krisapps.announcements;
 
 import krisapps.announcements.commands.*;
-import krisapps.announcements.commands.tab.AnnounceTab;
-import krisapps.announcements.commands.tab.AutoAnnounceTab;
-import krisapps.announcements.commands.tab.CreateAnnouncementTab;
-import krisapps.announcements.commands.tab.ResetAutoAnnounceTab;
+import krisapps.announcements.commands.tab.*;
 import krisapps.announcements.events.AnnouncementTriggerEventHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -70,6 +67,7 @@ public final class Announcements extends JavaPlugin {
         getCommand("previewannouncement").setExecutor(new PreviewAnnouncementCommand(this));
         getCommand("scheduleautoannounce").setExecutor(new ScheduleAutoAnnounce(this));
         getCommand("resetautoannounce").setExecutor(new ResetAutoAnnounceCommand(this));
+        getCommand("editannouncement").setExecutor(new EditAnnouncementCommand(this));
 
         // Tab
         getCommand("createannouncement").setTabCompleter(new CreateAnnouncementTab());
@@ -77,6 +75,7 @@ public final class Announcements extends JavaPlugin {
         getCommand("scheduleautoannounce").setTabCompleter(new AutoAnnounceTab(this));
         getCommand("previewannouncement").setTabCompleter(new AnnounceTab(this));
         getCommand("resetautoannounce").setTabCompleter(new ResetAutoAnnounceTab(this));
+        getCommand("editannouncement").setTabCompleter(new EditAnnouncementTab(this));
 
         // Events
         Bukkit.getPluginManager().registerEvents(new AnnouncementTriggerEventHandler(this), this);

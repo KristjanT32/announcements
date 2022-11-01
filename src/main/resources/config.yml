@@ -1,5 +1,23 @@
 # Plugin configuration file for ${project.name} ${project.version}
 
+# Info
+#
+# / Placeholders /
+# There are a total of 8 global and one function specific placeholders.
+# Below is a list of placeholders available for use.
+# %playerCount% = Replaced by the amount of players currently online.
+# %today% = Replaced by the current timestamp.
+# %divider% = Replaced by the divider value in the customization section.
+# %footer% = Replaced by the footer value in the customization section.
+# %header% = Replaced by the header value in the customization section.
+# %maxPlayers% = Replaced by the server's maximum amount of players.
+# %bannedPlayers% = Replaced by the amount of banned players.
+# %motd% = Replaced by the server MOTD.
+# [[Case-Specific]] %player% = Replaced by the current player.
+
+
+
+
 # General
 
 # Customization
